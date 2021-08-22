@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F4111A1-AA4F-4631-B288-3008C5070E4D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TuVanMuaXeMayHCG</RootNamespace>
+    <AssemblyName>TuVanMuaXeMayHCG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\GiaTienBUS.cs" />
+    <Compile Include="BUS\DungTichBUS.cs" />
+    <Compile Include="BUS\HangBUS.cs" />
+    <Compile Include="BUS\LoaiXeBUS.cs" />
+    <Compile Include="BUS\LuatBUS.cs" />
+    <Compile Include="BUS\XeBUS.cs" />
+    <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\DungTichDAL.cs" />
+    <Compile Include="DAL\GiaTienDAL.cs" />
+    <Compile Include="DAL\HangDAL.cs" />
+    <Compile Include="DAL\LoaiXeDAL.cs" />
+    <Compile Include="DAL\LuatDAL.cs" />
+    <Compile Include="DAL\XeDAL.cs" />
+    <Compile Include="db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DungTichDTO.cs" />
+    <Compile Include="DTO\GiaTienDTO.cs" />
+    <Compile Include="DTO\HangDTO.cs" />
+    <Compile Include="DTO\LoaiXeDTO.cs" />
+    <Compile Include="DTO\LuatDTO.cs" />
+    <Compile Include="DTO\XeDTO.cs" />
+    <Compile Include="GUI\formDungTich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formDungTich.Designer.cs">
+      <DependentUpon>formDungTich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formGiaTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formGiaTien.Designer.cs">
+      <DependentUpon>formGiaTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formHang.Designer.cs">
+      <DependentUpon>formHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formLoaiXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formLoaiXe.Designer.cs">
+      <DependentUpon>formLoaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formLuat.Designer.cs">
+      <DependentUpon>formLuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formTuVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formTuVan.Designer.cs">
+      <DependentUpon>formTuVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\formXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\formXe.Designer.cs">
+      <DependentUpon>formXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\FowardChaningUtil.cs" />
+    <Compile Include="Utilities\MoveItem.cs" />
+    <EmbeddedResource Include="GUI\formDungTich.resx">
+      <DependentUpon>formDungTich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formGiaTien.resx">
+      <DependentUpon>formGiaTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formHang.resx">
+      <DependentUpon>formHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formLoaiXe.resx">
+      <DependentUpon>formLoaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formLuat.resx">
+      <DependentUpon>formLuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formTuVan.resx">
+      <DependentUpon>formTuVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\formXe.resx">
+      <DependentUpon>formXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db.dbml.layout">
+      <DependentUpon>db.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img20191204154035-1598520467112839121355.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

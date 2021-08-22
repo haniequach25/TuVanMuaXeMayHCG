@@ -1,0 +1,17 @@
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.csprojAssemblyReference.cache
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formMain.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.Properties.Resources.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.csproj.GenerateResource.cache
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.csproj.CoreCompileInputs.cache
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\bin\Debug\TuVanMuaXeMayHCG.exe.config
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\bin\Debug\TuVanMuaXeMayHCG.exe
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\bin\Debug\TuVanMuaXeMayHCG.pdb
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.exe
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.pdb
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formDungTich.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formGiaTien.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formHang.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formLoaiXe.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formXe.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formLuat.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formTuVan.resources
