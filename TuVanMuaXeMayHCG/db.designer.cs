@@ -30,15 +30,21 @@ namespace TuVanMuaXeMayHCG
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertDungTich(DungTich instance);
-    partial void UpdateDungTich(DungTich instance);
-    partial void DeleteDungTich(DungTich instance);
+    partial void InsertDacDiem(DacDiem instance);
+    partial void UpdateDacDiem(DacDiem instance);
+    partial void DeleteDacDiem(DacDiem instance);
+    partial void InsertDoiTuong(DoiTuong instance);
+    partial void UpdateDoiTuong(DoiTuong instance);
+    partial void DeleteDoiTuong(DoiTuong instance);
     partial void InsertGiaTien(GiaTien instance);
     partial void UpdateGiaTien(GiaTien instance);
     partial void DeleteGiaTien(GiaTien instance);
     partial void InsertHang(Hang instance);
     partial void UpdateHang(Hang instance);
     partial void DeleteHang(Hang instance);
+    partial void InsertKieuDang(KieuDang instance);
+    partial void UpdateKieuDang(KieuDang instance);
+    partial void DeleteKieuDang(KieuDang instance);
     partial void InsertLoaiXe(LoaiXe instance);
     partial void UpdateLoaiXe(LoaiXe instance);
     partial void DeleteLoaiXe(LoaiXe instance);
@@ -80,11 +86,19 @@ namespace TuVanMuaXeMayHCG
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<DungTich> DungTiches
+		public System.Data.Linq.Table<DacDiem> DacDiems
 		{
 			get
 			{
-				return this.GetTable<DungTich>();
+				return this.GetTable<DacDiem>();
+			}
+		}
+		
+		public System.Data.Linq.Table<DoiTuong> DoiTuongs
+		{
+			get
+			{
+				return this.GetTable<DoiTuong>();
 			}
 		}
 		
@@ -101,6 +115,14 @@ namespace TuVanMuaXeMayHCG
 			get
 			{
 				return this.GetTable<Hang>();
+			}
+		}
+		
+		public System.Data.Linq.Table<KieuDang> KieuDangs
+		{
+			get
+			{
+				return this.GetTable<KieuDang>();
 			}
 		}
 		
@@ -129,8 +151,8 @@ namespace TuVanMuaXeMayHCG
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DungTich")]
-	public partial class DungTich : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DacDiem")]
+	public partial class DacDiem : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -149,7 +171,93 @@ namespace TuVanMuaXeMayHCG
     partial void OnNameChanged();
     #endregion
 		
-		public DungTich()
+		public DacDiem()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="VarChar(3) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this.OnCodeChanging(value);
+					this.SendPropertyChanging();
+					this._Code = value;
+					this.SendPropertyChanged("Code");
+					this.OnCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DoiTuong")]
+	public partial class DoiTuong : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Code;
+		
+		private string _Name;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCodeChanging(string value);
+    partial void OnCodeChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    #endregion
+		
+		public DoiTuong()
 		{
 			OnCreated();
 		}
@@ -322,6 +430,92 @@ namespace TuVanMuaXeMayHCG
     #endregion
 		
 		public Hang()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="VarChar(3) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this.OnCodeChanging(value);
+					this.SendPropertyChanging();
+					this._Code = value;
+					this.SendPropertyChanged("Code");
+					this.OnCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KieuDang")]
+	public partial class KieuDang : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Code;
+		
+		private string _Name;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCodeChanging(string value);
+    partial void OnCodeChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    #endregion
+		
+		public KieuDang()
 		{
 			OnCreated();
 		}

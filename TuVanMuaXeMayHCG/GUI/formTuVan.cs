@@ -15,10 +15,6 @@ namespace TuVanMuaXeMayHCG.GUI
 {
     public partial class formTuVan : Form
     {
-        DungTichBUS dungtich = new DungTichBUS();
-        GiaTienBUS giatien = new GiaTienBUS();
-        LoaiXeBUS loaixe = new LoaiXeBUS();
-        HangBUS hang = new HangBUS();
         public formTuVan()
         {
             InitializeComponent();
@@ -31,10 +27,6 @@ namespace TuVanMuaXeMayHCG.GUI
         }
         public void loadCombo()
         {
-            //combobox dung tích
-            cbbDungTich.DataSource = DungTichBUS.FindAll();
-            cbbDungTich.DisplayMember = "Name";
-            cbbDungTich.ValueMember = "Name";
 
             //combobox giá tiền
             cbbGiaTien.DataSource = GiaTienBUS.FindAll();
@@ -50,6 +42,21 @@ namespace TuVanMuaXeMayHCG.GUI
             cbbHang.DataSource = HangBUS.FindAll();
             cbbHang.ValueMember = "Name";
             cbbHang.ValueMember = "Name";
+
+            //combobox đối tượng
+            cbbDoiTuong.DataSource = DoiTuongBUS.FindAll();
+            cbbDoiTuong.ValueMember = "Name";
+            cbbDoiTuong.ValueMember = "Name";
+
+            //combobox kiểu dáng
+            cbbKieuDang.DataSource = KieuDangBUS.FindAll();
+            cbbKieuDang.ValueMember = "Name";
+            cbbKieuDang.ValueMember = "Name";
+
+            //combobox đặc điểm
+            cbbDacDiem.DataSource = DacDiemBUS.FindAll();
+            cbbDacDiem.ValueMember = "Name";
+            cbbDacDiem.ValueMember = "Name";
         }
 
         private void btnKetQua_Click(object sender, EventArgs e)
@@ -58,35 +65,44 @@ namespace TuVanMuaXeMayHCG.GUI
             {
                 dataGridView1.DataSource = null;
                 var assumption = new List<string>();
-                DungTichDTO capacity = (DungTichDTO)cbbDungTich.SelectedItem;
                 HangDTO brand = (HangDTO)cbbHang.SelectedItem;
                 GiaTienDTO price = (GiaTienDTO)cbbGiaTien.SelectedItem;
                 LoaiXeDTO type = (LoaiXeDTO)cbbLoaiXe.SelectedItem;
-                if (capacity.Code == "D00")
+                DoiTuongDTO target = (DoiTuongDTO)cbbDoiTuong.SelectedItem;
+                KieuDangDTO style = (KieuDangDTO)cbbKieuDang.SelectedItem;
+                DacDiemDTO feature = (DacDiemDTO)cbbDacDiem.SelectedItem;
+
+                if (price.Code == "A00")
                 {
-                    throw new Exception("Dung tích không được để trống");
+                    assumption.Add(target.Code.Trim());
                 }
                 else
                 {
-                    assumption.Add(capacity.Code.Trim());
-                }
-
-                if (price.Code == "A00" && type.Code == "C00" && brand.Code != "B00")
-                {
-                    assumption.Add(brand.Code.Trim());
-                }
-                if (price.Code != "A00" && type.Code == "C00" && brand.Code == "B00")
-                {
                     assumption.Add(price.Code.Trim());
                 }
-                if (price.Code == "A00" && type.Code != "C00" && brand.Code == "B00")
+
+                if (type.Code == "C00")
+                {
+                    assumption.Add(style.Code.Trim());
+                }
+                else
                 {
                     assumption.Add(type.Code.Trim());
                 }
 
-                if (assumption.Count < 2)
+                if (brand.Code == "B00")
                 {
-                    throw new Exception("Không có loại xe phù hợp với mô tả của bạn!");
+                    assumption.Add(feature.Code.Trim());
+                }
+                else
+                {
+                    assumption.Add(brand.Code.Trim());
+                }
+
+
+                if (assumption.Count < 3)
+                {
+                    throw new Exception("Hãy trả lời cụ thể tối thiểu 3 câu hỏi để chúng tôi tư vấn cho bạn!");
                 }
 
                 var xes = ForwardChainingUtil.Result(assumption);
@@ -95,9 +111,13 @@ namespace TuVanMuaXeMayHCG.GUI
                 {
                     throw new Exception("Không có loại xe phù hợp với mô tả của bạn!");
                 }
-                this.dataGridView1.Visible = true;
-                this.dataGridView1.DataSource = xes;
-                this.dataGridView1.Columns["Code"].Visible = false;
+                else
+                {
+                    MessageBox.Show("Có " + xes.Count.ToString() + " xe phù hợp với yêu cầu của bạn!");
+                    this.dataGridView1.Visible = true;
+                    this.dataGridView1.DataSource = xes;
+                    this.dataGridView1.Columns["Code"].Visible = false;
+                }
             }
             catch(Exception ex)
             {
@@ -107,10 +127,12 @@ namespace TuVanMuaXeMayHCG.GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            cbbDungTich.SelectedValue = "Không rõ";
             cbbGiaTien.SelectedValue = "Không rõ";
             cbbHang.SelectedValue = "Không rõ";
             cbbLoaiXe.SelectedValue = "Không rõ";
+            cbbDacDiem.SelectedValue = "Không rõ";
+            cbbDoiTuong.SelectedValue = "Không rõ";
+            cbbKieuDang.SelectedValue = "Không rõ";
         }
     }
 }

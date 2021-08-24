@@ -35,12 +35,13 @@ namespace TuVanMuaXeMayHCG.GUI
             this.btnTrangChu = new System.Windows.Forms.Button();
             this.btnTuVan = new System.Windows.Forms.Button();
             this.btnLuat = new System.Windows.Forms.Button();
-            this.btnDungTich = new System.Windows.Forms.Button();
             this.btnLoaiXe = new System.Windows.Forms.Button();
             this.btnHang = new System.Windows.Forms.Button();
             this.btnGiaTien = new System.Windows.Forms.Button();
             this.btnXe = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnKieuDang = new System.Windows.Forms.Button();
+            this.btnDoiTuong = new System.Windows.Forms.Button();
             this.panelDesktop.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +80,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // btnTrangChu
             // 
             this.btnTrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangChu.Location = new System.Drawing.Point(0, 39);
+            this.btnTrangChu.Location = new System.Drawing.Point(-1, -1);
             this.btnTrangChu.Name = "btnTrangChu";
             this.btnTrangChu.Size = new System.Drawing.Size(175, 51);
             this.btnTrangChu.TabIndex = 1;
@@ -90,7 +91,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // btnTuVan
             // 
             this.btnTuVan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTuVan.Location = new System.Drawing.Point(0, 96);
+            this.btnTuVan.Location = new System.Drawing.Point(-1, 56);
             this.btnTuVan.Name = "btnTuVan";
             this.btnTuVan.Size = new System.Drawing.Size(175, 51);
             this.btnTuVan.TabIndex = 2;
@@ -101,7 +102,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // btnLuat
             // 
             this.btnLuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuat.Location = new System.Drawing.Point(0, 153);
+            this.btnLuat.Location = new System.Drawing.Point(-1, 113);
             this.btnLuat.Name = "btnLuat";
             this.btnLuat.Size = new System.Drawing.Size(175, 51);
             this.btnLuat.TabIndex = 3;
@@ -109,21 +110,10 @@ namespace TuVanMuaXeMayHCG.GUI
             this.btnLuat.UseVisualStyleBackColor = true;
             this.btnLuat.Click += new System.EventHandler(this.btnLuat_Click);
             // 
-            // btnDungTich
-            // 
-            this.btnDungTich.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDungTich.Location = new System.Drawing.Point(0, 210);
-            this.btnDungTich.Name = "btnDungTich";
-            this.btnDungTich.Size = new System.Drawing.Size(175, 51);
-            this.btnDungTich.TabIndex = 2;
-            this.btnDungTich.Text = "DUNG TÍCH";
-            this.btnDungTich.UseVisualStyleBackColor = true;
-            this.btnDungTich.Click += new System.EventHandler(this.btnDungTich_Click);
-            // 
             // btnLoaiXe
             // 
             this.btnLoaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoaiXe.Location = new System.Drawing.Point(0, 267);
+            this.btnLoaiXe.Location = new System.Drawing.Point(-1, 227);
             this.btnLoaiXe.Name = "btnLoaiXe";
             this.btnLoaiXe.Size = new System.Drawing.Size(175, 51);
             this.btnLoaiXe.TabIndex = 2;
@@ -134,7 +124,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // btnHang
             // 
             this.btnHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHang.Location = new System.Drawing.Point(0, 324);
+            this.btnHang.Location = new System.Drawing.Point(-1, 284);
             this.btnHang.Name = "btnHang";
             this.btnHang.Size = new System.Drawing.Size(175, 51);
             this.btnHang.TabIndex = 4;
@@ -145,7 +135,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // btnGiaTien
             // 
             this.btnGiaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiaTien.Location = new System.Drawing.Point(0, 381);
+            this.btnGiaTien.Location = new System.Drawing.Point(-1, 341);
             this.btnGiaTien.Name = "btnGiaTien";
             this.btnGiaTien.Size = new System.Drawing.Size(175, 51);
             this.btnGiaTien.TabIndex = 5;
@@ -156,7 +146,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // btnXe
             // 
             this.btnXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXe.Location = new System.Drawing.Point(0, 438);
+            this.btnXe.Location = new System.Drawing.Point(-1, 170);
             this.btnXe.Name = "btnXe";
             this.btnXe.Size = new System.Drawing.Size(175, 51);
             this.btnXe.TabIndex = 6;
@@ -168,18 +158,41 @@ namespace TuVanMuaXeMayHCG.GUI
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.Control;
             this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenu.Controls.Add(this.btnKieuDang);
+            this.panelMenu.Controls.Add(this.btnDoiTuong);
             this.panelMenu.Controls.Add(this.btnTrangChu);
             this.panelMenu.Controls.Add(this.btnXe);
             this.panelMenu.Controls.Add(this.btnTuVan);
             this.panelMenu.Controls.Add(this.btnGiaTien);
             this.panelMenu.Controls.Add(this.btnLuat);
             this.panelMenu.Controls.Add(this.btnHang);
-            this.panelMenu.Controls.Add(this.btnDungTich);
             this.panelMenu.Controls.Add(this.btnLoaiXe);
             this.panelMenu.Location = new System.Drawing.Point(0, 1);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(175, 660);
             this.panelMenu.TabIndex = 7;
+            // 
+            // btnKieuDang
+            // 
+            this.btnKieuDang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKieuDang.Location = new System.Drawing.Point(-1, 455);
+            this.btnKieuDang.Name = "btnKieuDang";
+            this.btnKieuDang.Size = new System.Drawing.Size(175, 51);
+            this.btnKieuDang.TabIndex = 8;
+            this.btnKieuDang.Text = "KIỂU DÁNG";
+            this.btnKieuDang.UseVisualStyleBackColor = true;
+            this.btnKieuDang.Click += new System.EventHandler(this.btnKieuDang_Click);
+            // 
+            // btnDoiTuong
+            // 
+            this.btnDoiTuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiTuong.Location = new System.Drawing.Point(-1, 398);
+            this.btnDoiTuong.Name = "btnDoiTuong";
+            this.btnDoiTuong.Size = new System.Drawing.Size(175, 51);
+            this.btnDoiTuong.TabIndex = 7;
+            this.btnDoiTuong.Text = "ĐỐI TƯỢNG";
+            this.btnDoiTuong.UseVisualStyleBackColor = true;
+            this.btnDoiTuong.Click += new System.EventHandler(this.btnDoiTuong_Click);
             // 
             // formMain
             // 
@@ -206,11 +219,12 @@ namespace TuVanMuaXeMayHCG.GUI
         private System.Windows.Forms.Button btnTrangChu;
         private System.Windows.Forms.Button btnTuVan;
         private System.Windows.Forms.Button btnLuat;
-        private System.Windows.Forms.Button btnDungTich;
         private System.Windows.Forms.Button btnLoaiXe;
         private System.Windows.Forms.Button btnHang;
         private System.Windows.Forms.Button btnGiaTien;
         private System.Windows.Forms.Button btnXe;
         private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnKieuDang;
+        private System.Windows.Forms.Button btnDoiTuong;
     }
 }

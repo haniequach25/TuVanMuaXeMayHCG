@@ -7,13 +7,13 @@ using TuVanMuaXeMayHCG.DTO;
 
 namespace TuVanMuaXeMayHCG.DAL
 {
-    class DungTichDAL
+    class KieuDangDAL
     {
         private dbDataContext db = new dbDataContext();
-        public List<DungTichDTO> FindAll()
+        public List<KieuDangDTO> FindAll()
         {
-            var query = db.DungTiches.Select(x =>
-                new DungTichDTO
+            var query = db.KieuDangs.Select(x =>
+                new KieuDangDTO
                 {
                     Code = x.Code.Trim(),
                     Name = x.Name

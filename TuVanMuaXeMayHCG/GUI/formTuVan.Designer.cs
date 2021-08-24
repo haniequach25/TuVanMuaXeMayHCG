@@ -35,10 +35,8 @@ namespace TuVanMuaXeMayHCG.GUI
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.cbbGiaTien = new System.Windows.Forms.ComboBox();
             this.cbbLoaiXe = new System.Windows.Forms.ComboBox();
-            this.cbbDungTich = new System.Windows.Forms.ComboBox();
             this.cbbHang = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,16 +48,28 @@ namespace TuVanMuaXeMayHCG.GUI
             this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbbDoiTuong = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cbbKieuDang = new System.Windows.Forms.ComboBox();
+            this.cbbDacDiem = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +106,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 211);
+            this.label3.Location = new System.Drawing.Point(64, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 2;
@@ -106,7 +116,7 @@ namespace TuVanMuaXeMayHCG.GUI
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(377, 211);
+            this.label4.Location = new System.Drawing.Point(64, 285);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 3;
@@ -116,26 +126,16 @@ namespace TuVanMuaXeMayHCG.GUI
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(67, 413);
+            this.label5.Location = new System.Drawing.Point(64, 383);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Câu hỏi 3:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(377, 413);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Câu hỏi 4:";
-            // 
             // cbbGiaTien
             // 
             this.cbbGiaTien.FormattingEnabled = true;
-            this.cbbGiaTien.Location = new System.Drawing.Point(67, 297);
+            this.cbbGiaTien.Location = new System.Drawing.Point(67, 239);
             this.cbbGiaTien.Name = "cbbGiaTien";
             this.cbbGiaTien.Size = new System.Drawing.Size(206, 21);
             this.cbbGiaTien.TabIndex = 6;
@@ -143,23 +143,15 @@ namespace TuVanMuaXeMayHCG.GUI
             // cbbLoaiXe
             // 
             this.cbbLoaiXe.FormattingEnabled = true;
-            this.cbbLoaiXe.Location = new System.Drawing.Point(67, 499);
+            this.cbbLoaiXe.Location = new System.Drawing.Point(67, 438);
             this.cbbLoaiXe.Name = "cbbLoaiXe";
             this.cbbLoaiXe.Size = new System.Drawing.Size(206, 21);
             this.cbbLoaiXe.TabIndex = 8;
             // 
-            // cbbDungTich
-            // 
-            this.cbbDungTich.FormattingEnabled = true;
-            this.cbbDungTich.Location = new System.Drawing.Point(380, 499);
-            this.cbbDungTich.Name = "cbbDungTich";
-            this.cbbDungTich.Size = new System.Drawing.Size(206, 21);
-            this.cbbDungTich.TabIndex = 9;
-            // 
             // cbbHang
             // 
             this.cbbHang.FormattingEnabled = true;
-            this.cbbHang.Location = new System.Drawing.Point(380, 297);
+            this.cbbHang.Location = new System.Drawing.Point(67, 340);
             this.cbbHang.Name = "cbbHang";
             this.cbbHang.Size = new System.Drawing.Size(206, 21);
             this.cbbHang.TabIndex = 10;
@@ -209,7 +201,7 @@ namespace TuVanMuaXeMayHCG.GUI
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(67, 241);
+            this.panel2.Location = new System.Drawing.Point(67, 200);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(206, 33);
             this.panel2.TabIndex = 16;
@@ -229,7 +221,7 @@ namespace TuVanMuaXeMayHCG.GUI
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(380, 241);
+            this.panel3.Location = new System.Drawing.Point(67, 301);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(206, 33);
             this.panel3.TabIndex = 17;
@@ -249,7 +241,7 @@ namespace TuVanMuaXeMayHCG.GUI
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(67, 445);
+            this.panel4.Location = new System.Drawing.Point(67, 399);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(206, 33);
             this.panel4.TabIndex = 18;
@@ -264,26 +256,6 @@ namespace TuVanMuaXeMayHCG.GUI
             this.label10.TabIndex = 2;
             this.label10.Text = "Bạn muốn mua xe loại gì?";
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Location = new System.Drawing.Point(380, 445);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(206, 33);
-            this.panel5.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(165, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Dung tích xe mà bạn muốn mua?";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -292,13 +264,135 @@ namespace TuVanMuaXeMayHCG.GUI
             this.dataGridView1.Size = new System.Drawing.Size(369, 150);
             this.dataGridView1.TabIndex = 20;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(358, 184);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Câu hỏi 4:";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label13);
+            this.panel6.Location = new System.Drawing.Point(361, 200);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(206, 33);
+            this.panel6.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Bạn là đối tượng nào?";
+            // 
+            // cbbDoiTuong
+            // 
+            this.cbbDoiTuong.FormattingEnabled = true;
+            this.cbbDoiTuong.Location = new System.Drawing.Point(361, 239);
+            this.cbbDoiTuong.Name = "cbbDoiTuong";
+            this.cbbDoiTuong.Size = new System.Drawing.Size(206, 21);
+            this.cbbDoiTuong.TabIndex = 22;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(358, 285);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 13);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "Câu hỏi 5:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(358, 383);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 13);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Câu hỏi 6:";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Location = new System.Drawing.Point(361, 399);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(206, 33);
+            this.panel7.TabIndex = 18;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(3, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(201, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Đặc điểm nổi trội của xe bạn muốn mua?";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label17);
+            this.panel8.Location = new System.Drawing.Point(361, 301);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(206, 33);
+            this.panel8.TabIndex = 18;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(164, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Kiểu dáng xe mà bạn muốn là gì?";
+            // 
+            // cbbKieuDang
+            // 
+            this.cbbKieuDang.FormattingEnabled = true;
+            this.cbbKieuDang.Location = new System.Drawing.Point(361, 340);
+            this.cbbKieuDang.Name = "cbbKieuDang";
+            this.cbbKieuDang.Size = new System.Drawing.Size(206, 21);
+            this.cbbKieuDang.TabIndex = 25;
+            // 
+            // cbbDacDiem
+            // 
+            this.cbbDacDiem.FormattingEnabled = true;
+            this.cbbDacDiem.Location = new System.Drawing.Point(360, 438);
+            this.cbbDacDiem.Name = "cbbDacDiem";
+            this.cbbDacDiem.Size = new System.Drawing.Size(206, 21);
+            this.cbbDacDiem.TabIndex = 26;
+            // 
             // formTuVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 609);
+            this.Controls.Add(this.cbbDacDiem);
+            this.Controls.Add(this.cbbKieuDang);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cbbDoiTuong);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -307,10 +401,8 @@ namespace TuVanMuaXeMayHCG.GUI
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbbHang);
-            this.Controls.Add(this.cbbDungTich);
             this.Controls.Add(this.cbbLoaiXe);
             this.Controls.Add(this.cbbGiaTien);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -328,9 +420,13 @@ namespace TuVanMuaXeMayHCG.GUI
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,10 +440,8 @@ namespace TuVanMuaXeMayHCG.GUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbbGiaTien;
         private System.Windows.Forms.ComboBox cbbLoaiXe;
-        private System.Windows.Forms.ComboBox cbbDungTich;
         private System.Windows.Forms.ComboBox cbbHang;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
@@ -359,8 +453,18 @@ namespace TuVanMuaXeMayHCG.GUI
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbbDoiTuong;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cbbKieuDang;
+        private System.Windows.Forms.ComboBox cbbDacDiem;
     }
 }

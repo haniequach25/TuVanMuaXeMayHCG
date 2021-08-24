@@ -66,11 +66,6 @@ namespace TuVanMuaXeMayHCG.GUI
             OpenCurrentForm(new formLuat());
         }
 
-        private void btnDungTich_Click(object sender, EventArgs e)
-        {
-            OpenCurrentForm(new formDungTich());
-        }
-
         private void btnLoaiXe_Click(object sender, EventArgs e)
         {
             OpenCurrentForm(new formLoaiXe());
@@ -89,6 +84,21 @@ namespace TuVanMuaXeMayHCG.GUI
         private void btnXe_Click(object sender, EventArgs e)
         {
             OpenCurrentForm(new formXe());
+        }
+
+        private void btnDoiTuong_Click(object sender, EventArgs e)
+        {
+            OpenCurrentForm(new formDoiTuong());
+        }
+
+        private void btnKieuDang_Click(object sender, EventArgs e)
+        {
+            OpenCurrentForm(new formKieuDang());
+        }
+
+        private void btnDacDiem_Click(object sender, EventArgs e)
+        {
+            OpenCurrentForm(new formDacDiem());
         }
     }
 }

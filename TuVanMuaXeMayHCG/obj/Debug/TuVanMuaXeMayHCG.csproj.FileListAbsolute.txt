@@ -8,10 +8,12 @@ D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\bin\Debug\TuVanMuaXeMayHCG.exe
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\bin\Debug\TuVanMuaXeMayHCG.pdb
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.exe
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.pdb
-D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formDungTich.resources
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formGiaTien.resources
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formHang.resources
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formLoaiXe.resources
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formXe.resources
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formLuat.resources
 D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formTuVan.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formDacDiem.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formDoiTuong.resources
+D:\TuVanMuaXeMayHCG\TuVanMuaXeMayHCG\obj\Debug\TuVanMuaXeMayHCG.GUI.formKieuDang.resources

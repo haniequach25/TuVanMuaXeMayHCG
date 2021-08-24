@@ -1,7 +1,7 @@
 ﻿
 namespace TuVanMuaXeMayHCG.GUI
 {
-    partial class formDungTich
+    partial class formDacDiem
     {
         /// <summary>
         /// Required designer variable.
@@ -46,7 +46,7 @@ namespace TuVanMuaXeMayHCG.GUI
             this.btnXoa.Location = new System.Drawing.Point(662, 167);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 17;
+            this.btnXoa.TabIndex = 26;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -56,7 +56,7 @@ namespace TuVanMuaXeMayHCG.GUI
             this.btnSua.Location = new System.Drawing.Point(662, 129);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 16;
+            this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -66,7 +66,7 @@ namespace TuVanMuaXeMayHCG.GUI
             this.btnThem.Location = new System.Drawing.Point(662, 91);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 15;
+            this.btnThem.TabIndex = 24;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -81,22 +81,21 @@ namespace TuVanMuaXeMayHCG.GUI
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(536, 150);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
+            this.dataGridView1.TabIndex = 23;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(162, 167);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 13;
+            this.txtName.TabIndex = 22;
             // 
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(162, 132);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(100, 20);
-            this.txtCode.TabIndex = 12;
+            this.txtCode.TabIndex = 21;
             // 
             // label3
             // 
@@ -104,9 +103,9 @@ namespace TuVanMuaXeMayHCG.GUI
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(69, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Tên dung tích:";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Tên đặc điểm:";
             // 
             // label2
             // 
@@ -114,9 +113,9 @@ namespace TuVanMuaXeMayHCG.GUI
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(69, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Mã dung tích:";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Mã đặc điểm:";
             // 
             // label1
             // 
@@ -126,10 +125,10 @@ namespace TuVanMuaXeMayHCG.GUI
             this.label1.Location = new System.Drawing.Point(64, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 26);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Quản lý dung tích";
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Quản lý đặc điểm";
             // 
-            // formDungTich
+            // formDacDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,9 +142,9 @@ namespace TuVanMuaXeMayHCG.GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "formDungTich";
-            this.Text = "formDungTich";
-            this.Load += new System.EventHandler(this.formDungTich_Load);
+            this.Name = "formDacDiem";
+            this.Text = "formDacDiem";
+            this.Load += new System.EventHandler(this.formDacDiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

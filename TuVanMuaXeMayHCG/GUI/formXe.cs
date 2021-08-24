@@ -16,7 +16,6 @@ namespace TuVanMuaXeMayHCG.GUI
         XeBUS xe = new XeBUS();
         HangBUS hang = new HangBUS();
         LoaiXeBUS loaixe = new LoaiXeBUS();
-        DungTichBUS dungtich = new DungTichBUS();
         public formXe()
         {
             InitializeComponent();
@@ -44,9 +43,16 @@ namespace TuVanMuaXeMayHCG.GUI
             cbbType.ValueMember = "Name";
 
             //load combo Dung tích
-            cbbCapacity.DataSource = dungtich.getDungTich();
-            cbbCapacity.DisplayMember = "Name";
-            cbbCapacity.ValueMember = "Name";
+            cbbCapacity.Items.Add("97cc");
+            cbbCapacity.Items.Add("100cc");
+            cbbCapacity.Items.Add("108cc");
+            cbbCapacity.Items.Add("110cc");
+            cbbCapacity.Items.Add("113cc");
+            cbbCapacity.Items.Add("114cc");
+            cbbCapacity.Items.Add("115cc");
+            cbbCapacity.Items.Add("125cc");
+            cbbCapacity.Items.Add("135cc");
+            cbbCapacity.Items.Add("150cc");
         }
 
         private void btnThem_Click(object sender, EventArgs e)

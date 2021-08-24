@@ -11,44 +11,35 @@ using TuVanMuaXeMayHCG.BUS;
 
 namespace TuVanMuaXeMayHCG.GUI
 {
-    public partial class formDungTich : Form
+    public partial class formDoiTuong : Form
     {
-        DungTichBUS dungtich = new DungTichBUS();
-        public formDungTich()
+        DoiTuongBUS BUS = new DoiTuongBUS();
+        public formDoiTuong()
         {
             InitializeComponent();
         }
 
-        private void formDungTich_Load(object sender, EventArgs e)
+        private void formDoiTuong_Load(object sender, EventArgs e)
         {
             loadData();
         }
-
         public void loadData()
         {
-            dataGridView1.DataSource = dungtich.getDungTich();
+            dataGridView1.DataSource = BUS.getDoiTuong();
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             string code = txtCode.Text.Trim();
-            bool exist = dungtich.checkDungTich(code);
+            bool exist = BUS.checkDoiTuong(code);
             if (!exist)
             {
-                string name = "";
-                if (txtName.Text.Contains("cc"))
-                {
-                    name = txtName.Text;
-                }
-                else
-                {
-                    name = txtName.Text + "cc";
-                }
-                bool check = dungtich.insertDungTich(code, name);
+                string name = txtName.Text;
+                bool check = BUS.insertDoiTuong(code, name);
                 if (check)
                 {
-                    MessageBox.Show("Thêm dung tích " + code + " " + name + " thành công!");
+                    MessageBox.Show("Thêm đối tượng " + code + " " + name + " thành công!");
                 }
                 else
                 {
@@ -57,7 +48,7 @@ namespace TuVanMuaXeMayHCG.GUI
             }
             else
             {
-                MessageBox.Show("Đã TỒN TẠI mã dung tích này");
+                MessageBox.Show("Đã TỒN TẠI mã đối tượng này");
             }
             loadData();
         }
@@ -65,19 +56,11 @@ namespace TuVanMuaXeMayHCG.GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
             string code = txtCode.Text.Trim();
-            string name = "";
-            if (txtName.Text.Contains("cc"))
-            {
-                name = txtName.Text;
-            }
-            else
-            {
-                name = txtName.Text + "cc";
-            }
-            bool check = dungtich.updateDungTich(code, name);
+            string name = txtName.Text;
+            bool check = BUS.updateDoiTuong(code, name);
             if (check)
             {
-                MessageBox.Show("Cập nhật dung tích " + code + " thành công!");
+                MessageBox.Show("Cập nhật đối tượng " + code + " thành công!");
             }
             else
             {
@@ -90,12 +73,12 @@ namespace TuVanMuaXeMayHCG.GUI
         {
             string code = txtCode.Text.Trim();
             DialogResult result = MessageBox.Show("Bạn có chắc muốn XÓA dung tích " + code + " không???", "Thông báo", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
-                bool check = dungtich.deleteDungTich(code);
+                bool check = BUS.deleteDoiTuong(code);
                 if (check)
                 {
-                    MessageBox.Show("Xóa dung tích " + code + " thành công!");
+                    MessageBox.Show("Xóa đối tượng " + code + " thành công!");
                 }
                 else
                 {
