@@ -121,4 +121,10 @@
   <data name="img20191204154035-1598520467112839121355" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img20191204154035-1598520467112839121355.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="haui" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\haui.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

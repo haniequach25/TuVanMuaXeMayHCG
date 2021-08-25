@@ -52,13 +52,12 @@ namespace TuVanMuaXeMayHCG.Utilities
         {
             // Ket qua
             var result = new List<XeDTO>();
-            // Lay tat ca cac luat trong database va tou uu hoa tap luat
+            // Lay tat ca cac luat trong database va toi uu hoa tap luat
             List<LuatDTO> rules = OptimizeRule(LuatBUS.FindAll());
 
             List<LuatDTO> rulesCopy = new List<LuatDTO>(rules);
             // Lay tat ca cac doi tuong mobile trong database
             var xes = XeBUS.FindAll();
-            //var mobileId = mobile.Id;
             //-----------------------------------------------------------------------------------------
             //Buoc 1: Gan trung gian bang gia thiet
             List<string> mediate = assumptions;
@@ -67,7 +66,7 @@ namespace TuVanMuaXeMayHCG.Utilities
             Queue<int> SAT = new Queue<int>();
             mediate = ForwardChaining(SAT, rulesCopy, rules, mediate);
 
-            //Buoc 3: Kiem tra neu bien trung gian co chua mobile thi them vao ket qua
+            //Buoc 3: Kiem tra neu bien trung gian co chua xe thi them vao ket qua
             xes.ForEach(xe =>
             {
                 if (mediate.Contains(xe.Code))
